@@ -1,0 +1,75 @@
+name: linghu_app
+description: 灵狐·优库近选 - 三端统一入口APP（消费者/仓主/品牌方）
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.0 <4.0.0"
+  flutter: ">=3.7.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # HTTP 请求
+  http: ^1.2.1
+
+  # 本地存储（JWT Token）
+  shared_preferences: ^2.2.2
+
+  # 状态管理
+  provider: ^6.1.1
+
+  # WebSocket（STOMP）
+  stomp_dart_client: ^0.4.4
+
+  # LBS 定位（14.x 起 geolocator_web 支持 Wasm 编译）
+  geolocator: ^14.0.0
+
+  # 条码扫描（拣货用）—— 使用 mobile_scanner，已移除旧的 flutter_barcode_scanner
+  # mobile_scanner 已在下方声明
+
+  # 图表（收益/数据看板）
+  fl_chart: ^0.65.0
+
+  # 图片缓存
+  cached_network_image: ^3.3.1
+
+  # 图标
+  cupertino_icons: ^1.0.6
+
+  # H5 支付跳转
+  url_launcher: ^6.2.4
+
+  # 事件总线
+  event_bus: ^2.0.0
+
+  # Toast 提示
+  fluttertoast: ^9.0.0
+
+  # 图片选择（品牌方上传商品图）
+  image_picker: ^1.0.7
+
+  # 地图（OpenStreetMap，无需API Key）
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1
+
+  # 逆地理编码（GPS坐标 → 省市区地名）
+  geocoding: ^4.0.0
+
+  # 条形码渲染（商品展示页显示条码图形）
+  barcode_widget: ^2.0.4
+  mobile_scanner: ^7.2.0
+
+  # 二维码生成（自提码展示）
+  qr_flutter: ^4.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
